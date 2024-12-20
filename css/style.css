@@ -44,7 +44,7 @@ body fieldset {
 }
 
 .btn-primary,
-.nav-pills .nav-link.active, 
+.nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
     color: #fff;
     background-color: teal;

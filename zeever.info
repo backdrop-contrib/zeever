@@ -20,4 +20,6 @@ stylesheets[all][] = css/components/hero.css
 stylesheets[all][] = css/components/cards.css
 stylesheets[all][] = css/components/zeever-views.css
 stylesheets[all][] = css/components/taxonomy.css
+stylesheets[all][] = css/components/responsive.css
 stylesheets[all][] = css/recipes.css
+

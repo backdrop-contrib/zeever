@@ -22,35 +22,37 @@
 <header id="navbar" role="banner" class="navbar navbar-expand-lg navbar-light">
   <div class="<?php print $container_class;?>">
     <div class="navbar-header">
-      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
       <?php if ($site_name || $logo): ?>
-        <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-          <?php if ($logo): ?>
-            <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-          <?php endif; ?>
-          <?php if ($site_name): ?>
-            <?php print $site_name; ?>
-          <?php endif; ?>
-        </a>
+        <div class="header-content">
+          <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+            <?php if ($logo): ?>
+              <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+            <?php endif; ?>
+            <?php if ($site_name): ?>
+              <?php print $site_name; ?>
+            <?php endif; ?>
+          </a>
+          <div role="banner" id="page-header">
+            <?php if (!empty($site_slogan)): ?>
+              <p class="lead"><?php print $site_slogan; ?></p>
+            <?php endif; ?>
+          </div> <!-- /#page-header -->
+        </div>
       <?php endif; ?>
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <div type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+        <div class="right quarter">
+          <a class="toggle-title" ></a>
+          <a class="toggle-nav" href="#">&#9776;</a>
+        </div> <!-- .one-half right -->
+      </div>
     </div>
-    
+
     <?php if ($navigation or $menu): ?>
-    <div class="navbar-collapse collapse <?php print $navbar_menu_position; ?>">
-      <?php if ($menu) print $menu; ?>
-      <?php if ($navigation) print $navigation; ?>
-    </div>
+      <div class="navbar-collapse collapse <?php print $navbar_menu_position; ?>">
+        <?php if ($menu) print $menu; ?>
+        <?php if ($navigation) print $navigation; ?>
+      </div>
     <?php endif; ?>
   </div>
 </header>
-<header role="banner" id="page-header">
-  <?php if (!empty($site_slogan)): ?>
-    <p class="lead"><?php print $site_slogan; ?></p>
-  <?php endif; ?>
-</header> <!-- /#page-header -->
