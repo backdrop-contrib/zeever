@@ -201,6 +201,12 @@ function zeever_preprocess_page(&$variables) {
   foreach ($user->roles as $role) {
     $variables['classes'][] = 'role-' . $role;
   }
+
+  /* Add custom js functions to all page*/
+  $options = array(
+    'group' => JS_THEME,
+  );
+  backdrop_add_js(backdrop_get_path('theme', 'zeever'). '/js/custom.js', $options);
 }
 
 /**
