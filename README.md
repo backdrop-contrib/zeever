@@ -26,7 +26,8 @@ tested here: https://github.com/backdrop-contrib/digital_agency
 Current Maintainers
 -------------------
 
-- [Tim Erickson](https://github.com/stpaultim).
+- [Tim Erickson](https://github.com/stpaultim)
+- [Professor Graham Leach(https://github.com/professorgram)
 
 Credits
 -------
